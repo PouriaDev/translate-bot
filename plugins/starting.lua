@@ -9,7 +9,7 @@
 local action = function(msg, matches)
 
 if matches[1] == 'start' then
-local text = 'Hi 👋 '..msg.from.first_name..'\nplease select yor language 😊\n-------------\nسلام 👋  '..msg.from.first_name..'\nلطفا زبان خود را انتخاب کنید'
+local text = 'Hi!'..msg.from.first_name..'\nPlease Select Your Language!\n-------------\nسلام!'..msg.from.first_name..'\nلطفا زبان خود را انتخاب کنید!'
 	keyboard = {} -- Array Of Keyboard
 	keyboard.inline_keyboard = {
 	   {
@@ -27,13 +27,12 @@ local text = 'Hi 👋 '..msg.from.first_name..'\nplease select yor language 😊
         local text1 = ''
         if matches[1] == 'langfa' then
 			text1 = 'زبان تنظیم شد!'
-            text = 'دوست عزیز '..msg.from.first_name..' به ربات ترجمه خوش اومدی 😊🌹\nبرای ترجمه کلمه یا جمله فقط کافیه متنتو برای ما بفرستی'
+            text = 'دوست عزیز '..msg.from.first_name..' به ربات ترجمه خوش اومدی!\nبرای ترجمه کلمه یا جمله فقط کافیه متنتو برای ما بفرستی!'
 			client:set('UserLnag'..msg.from.id, 'FA')
         end
 		if matches[1] == 'langen' then
 			text1 = 'Language Set!'
-		    text = [[Welcome my friend 
-please send your text for translate]]
+		    text = "Hi "..msg.from.first_name.."Welcome To Translate Bot!\nPlease Send Your Text For Translate!"
 			client:set('UserLnag'..msg.from.id, 'EN')
 		end
 		api.sendChatAction(msg.chat.id, 'typing')
