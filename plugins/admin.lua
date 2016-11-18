@@ -42,9 +42,9 @@ if is_admin(msg) then
 			end
 		end
 		
-		local text = '#Stats\n*Blocked Users* : `'..blocked..'`\n*Messages* : `'..msgs..'`\n*Starts* : `'..starts..'`\n'..mem
+		local text = '*Bot Stats*\n*Blocked Users* : `'..blocked..'`\n*Messages* : `'..msgs..'`\n*Starts* : `'..starts..'`\n'..mem
 		local dbinfo = client:info()
-		text = text..'\n\n#Clinet Info\n'
+		text = text..'\n\n*Clinet Info*\n'
 	    text = text..'1 - *Client Version* : `'..dbinfo.server.redis_version..'`\n'
 	    text = text..'2 - *Uptime Days* : `'..dbinfo.server.uptime_in_days..'('..dbinfo.server.uptime_in_seconds..' seconds)`\n'
 	    text = text..'3 - *Commands Processed* : `'..dbinfo.stats.total_commands_processed..'`\n'
