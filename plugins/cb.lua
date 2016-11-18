@@ -37,7 +37,7 @@ if not lang then return false end
 			api.sendMessage(msg.chat.id, 'Translate :\n*'..data.text[1]..'*', true)
         end
 		if matches[1] == 'exit' then
-			api.editMessageText(msg.chat.id, msg.message_id, 'Keyboard Removed!')
+			api.editMessageText(msg.chat.id, msg.message_id, 'You Are Exited From Translate Table!')
         end
 	end
 end
